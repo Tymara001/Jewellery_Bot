@@ -1,4 +1,4 @@
-
+# bug - Accepts blank input
 
 print("Please enter the pickup information")
 
