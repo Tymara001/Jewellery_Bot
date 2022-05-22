@@ -22,9 +22,26 @@ def welcome():
 
 # Menu for pick up or delivery
 
-
-
-
+def pickup():
+    print ("Is your order for pickup or delivery?")
+    print (" For pickup please enter 1")
+    print ("For delivery please enter 2")
+    while True:
+        try:
+            delivery = int(input("Please enter a number "))
+            if delivery >= 1 and delivery <= 2:   
+                if delivery == 1:
+                    print ("Pickup")
+                    break
+            
+                elif delivery == 2:
+                    print ("Delivery")
+                    break
+            else:
+                print("The number must be 1 or 2")
+        except ValueError:
+            print ("That is not a vaild number")
+            print("Please enter 1 or 2")
 
 # Pick up information - name and phone number 
 
@@ -60,7 +77,7 @@ def welcome():
 
 
 
-#Prin order out - including if order is del or pick up and names and price of each jewellery - total cost including any delivery charge
+#Print order out - including if order is del or pick up and names and price of each jewellery - total cost including any delivery charge
 
 
 
@@ -88,6 +105,7 @@ def main():
  Returns: None
     '''
     welcome()
+    pickup()
 
 
 main()
