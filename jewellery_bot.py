@@ -1,4 +1,10 @@
 # Jewellery bot program
+#24/05/22
+#Bugs - Phone number allows numbers
+#     - Name input allows numbers
+
+
+
 import random
 from random import randint
 
