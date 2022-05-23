@@ -4,6 +4,19 @@ from random import randint
 
 # List fo random names
 names = ["Rose", "Lily", "Eric", "Lyle", "Bella", "James", "Isabella", "katie", "Jack", "Lara"]
+#Customer details dictionary
+customer_details = {}
+
+# vaildates inputs to check if they are blank
+def not_blank(question):
+    vaild = False
+    while not vaild:
+       response = input(question)
+       if response != "":
+           return response.title()
+       else:
+           print("This cannot be blank")
+
 
 # Welcome message with random name 
 def welcome():
@@ -22,7 +35,7 @@ def welcome():
 
 # Menu for pick up or delivery
 
-def pickup():
+def order_type():
     print ("Is your order for pickup or delivery?")
     print (" For pickup please enter 1")
     print ("For delivery please enter 2")
@@ -32,8 +45,9 @@ def pickup():
             if delivery >= 1 and delivery <= 2:   
                 if delivery == 1:
                     print ("Pickup")
+                    pickup
                     break
-            
+
                 elif delivery == 2:
                     print ("Delivery")
                     break
@@ -43,8 +57,17 @@ def pickup():
             print ("That is not a vaild number")
             print("Please enter 1 or 2")
 
-# Pick up information - name and phone number 
 
+# Pick up information - name and phone number 
+def pickup():
+    question = ("Please enter your name ")
+    customer_details['name'] = not_blank(question)
+    #print (customer_details['name'])
+
+    question = ("Please enter your phone number ")
+    customer_details['phone'] = not_blank(question)
+    #print (customer_details['phone'])
+    print(customer_details)
 
 
 
@@ -105,6 +128,7 @@ def main():
  Returns: None
     '''
     welcome()
+    order_type()
     pickup()
 
 
