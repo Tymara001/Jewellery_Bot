@@ -3,13 +3,18 @@
 #Bugs - Phone number allows numbers
 #     - Name input allows numbers
 
-
-
 import random
 from random import randint
 
 # List fo random names
 names = ["Rose", "Lily", "Eric", "Lyle", "Bella", "James", "Isabella", "katie", "Jack", "Lara"]
+# lists of jewellery names
+jewellery_names = ['moon ring','cycstle ring','promise ring', 'friendship ring','ruby ring','rose quartz ring',
+                 'crystal bracelet','charm breacelet','rose quartz necklace','jade cryctle bracelet','gemstone necklace',
+                 'tiger eye bracelet']
+# lists of jewellery pices
+jewellery_prices = [9.50, 9.50, 9.50, 9.50, 9.50, 9.50, 12.50, 12.50, 12.50, 12.50, 12.50, 12.50]
+
 #Customer details dictionary
 customer_details = {}
 
@@ -98,20 +103,21 @@ def delivery_info():
     question = ("Please enter your suburb ")
     customer_details['suburb'] = not_blank(question)
     print (customer_details['suburb'])
-    print(customer_details)
-
-
-
-
-# Choose total number of accessories - max 10
-
-
-
-
-
 
 
 # Jewellery menu
+def menu():
+    number_jewellery = 12
+
+    for count in range (number_jewellery):
+     print("{} {} ${:.2f}"    .format(count+1,jewellery_names[count],jewellery_prices[count]))
+
+
+
+
+
+
+# Choose total number of jewellery - max 6
 
 
 
@@ -153,6 +159,7 @@ def main():
     '''
     welcome()
     order_type()
+    menu()
 
 
 main()
