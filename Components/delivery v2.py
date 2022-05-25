@@ -15,11 +15,11 @@ def not_blank(question):
 def delivery():
     question = ("Please enter your name ")
     customer_details['name'] = not_blank(question)
-    #print (customer_details['name'])
+    print (customer_details['name'])
 
     question = ("Please enter your phone number ")
     customer_details['phone'] = not_blank(question)
-    #print (customer_details['phone'])
+    print (customer_details['phone'])
 
     question = ("Please enter your house number ")
     customer_details['house'] = not_blank(question)
